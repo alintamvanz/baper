@@ -76,7 +76,7 @@ echo "1 ) Install"
 echo "2 ) Uninstall"
 printf "\n\n"
 echo "+----------------------------------+"
-echo -n $m"options ] :"$n
+echo -n -e $m"options ] :"$n
 read opt
 if [[ $opt == "1" ]]; then
 echo -e $h"[+] Installing please wait..."$n
