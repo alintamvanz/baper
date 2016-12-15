@@ -1,95 +1,108 @@
 #!/bin/bash
+k="\033[1;33m"
+m="\033[1;31m"
+h="\033[1;32m"
+b1(){
+echo -e $k"                     (+++++++++++)                                                       "
+echo -e $k"                  (++++)                                                                 "
+echo -e $k"               (+++)                                                                     "
+echo -e $k"             (+++)                                                                       "
+echo -e $k"            (++)                                                                         "
+echo -e $k"            [~]                                                                          "
+echo -e $k"            | | (~)  (~)  (~)    /~~~~~~~~~~~~                                           "
+echo -e $k"         /~~~~~~~~~~~~~~~~~~~~~~~  [~_~_] |    * * * /~~~~~~~~~~~|                       "
+echo -e $k"       [|  %___________________           | |~~~~~~~~            |                       "
+echo -e $k"         \[___] ___   ___   ___\  No. 4   | |   IKLAN LEWAT      |                       "
+echo -e $k"      /// [___+/-+-\-/-+-\-/-+ \\_________|=|____________________|=  NEtNoott....        "
+echo -e $k"    //// @-=-@ \___/ \___/ \___/  @-==-@      @-==-@      @-==-@                         "
+echo -e $k" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                   "
 
-# Baper - Make Beautifull terminal 
-# Codename  : Jones
-# Version   : 1.0
-# Author    : alinko (shutdown57)
-# Site      : linuXcode.org
+}
+b2(){
+echo -e $k"                                (+++++++++++)                                                       "
+echo -e $k"                             (++++)                                                                 "
+echo -e $k"                          (+++)                                                                     "
+echo -e $k"                        (+++)                                                                       "
+echo -e $k"                       (++)                                                                         "
+echo -e $k"                       [~]                                                                          "
+echo -e $k"                       | | (~)  (~)  (~)    /~~~~~~~~~~~~                                           "
+echo -e $k"                    /~~~~~~~~~~~~~~~~~~~~~~~  [~_~_] |    * * * /~~~~~~~~~~~|                       "
+echo -e $k"                  [|  %___________________           | |~~~~~~~~            |                       "
+echo -e $k"                    \[___] ___   ___   ___\  No. 4   | |   IKLAN LEWAT      |                       "
+echo -e $k"                 /// [___+/-+-\-/-+-\-/-+ \\_________|=|____________________|=  NEtNoott....        "
+echo -e $k"               //// @-=-@ \___/ \___/ \___/  @-==-@      @-==-@      @-==-@                         "
+echo -e $k"            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                   "
 
+}
+b3(){
+echo -e $k"                                             (+++++++++++)                                                       "
+echo -e $k"                                          (++++)                                                                 "
+echo -e $k"                                       (+++)                                                                     "
+echo -e $k"                                     (+++)                                                                       "
+echo -e $k"                                    (++)                                                                         "
+echo -e $k"                                    [~]                                                                          "
+echo -e $k"                                    | | (~)  (~)  (~)    /~~~~~~~~~~~~                                           "
+echo -e $k"                                 /~~~~~~~~~~~~~~~~~~~~~~~  [~_~_] |    * * * /~~~~~~~~~~~|                       "
+echo -e $k"                               [|  %___________________           | |~~~~~~~~            |                       "
+echo -e $k"                                 \[___] ___   ___   ___\  No. 4   | |   IKLAN LEWAT      |                       "
+echo -e $k"                              /// [___+/-+-\-/-+-\-/-+ \\_________|=|____________________|=  NEtNoott....        "
+echo -e $k"                            //// @-=-@ \___/ \___/ \___/  @-==-@      @-==-@      @-==-@                         "
+echo -e $k"                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                   "
 
-m="\e[1;31m" # merah
-k="\e[1;33m" # kuning kyak tai
-h="\e[1;32m" # Hijau 
-b="\e[1;34m" # Biru
-n="\e[1;0m"  # default
-u="\e[4m"    # underlined 
-clear
-BAPER_WORK_DIR="/opt/baper/coli"
-case $1 in
-	"--ahh" )
-cat $BAPER_WORK_DIR/$2.txt > /dev/null 2>&1
-if [[ "$?" -eq "0" ]]; then
-	cat $BAPER_WORK_DIR/$2.txt
-	printf "\n\n"
-else
-	echo "BAPER GAN? : File Not Found.."
-fi
-		;;
-	"--add" )
-cat $2 > /dev/null 2>&1
-if [[ "$?" -eq "0" ]]; then
-	cp $2 $BAPER_WORK_DIR
-else
-	echo "BAPER GAN? : File Not Found.."
-fi        ;;
-     "--figlet" )
-which figlet > /dev/null 2>&1
-if [[ "$?" -eq "0" ]]; then
-	figlet $2
-else
-	echo "BAPER GAN? : figlet Not installed."
-fi
-          ;;
-          "--show" )
-ls $BAPER_WORK_DIR
-          ;;
-      "--about" )
-echo -e $h"~[ Baper ]~"
-echo -e $n"-> This tool is made to beautify your terminal, enjoy!"
-          ;;
-     "--cpuinfo" )
-cat /proc/cpuinfo > /dev/null 2>&1
-if [[ "$?" -eq "0" ]]; then
-	more /proc/cpuinfo
-else
-	echo "/proc/cpuinfo : Not Found ."
-fi
-         ;;
-     * )
-clear
-      printf "
+}
+	clear
+	b3
+	sleep 1
+	clear
+	b2
+	sleep 1
+	clear
+	b1
+	sleep 1
+	clear
+	b1
+	sleep 1
+	clear
+	b2
+	sleep 1
+	clear
+	b3 
+	sleep 1
 
-            ▄▄▄▄    ▄▄▄       ██▓███  ▓█████  ██▀███  
-            ▓█████▄ ▒████▄    ▓██░  ██▒▓█   ▀ ▓██ ▒ ██▒
-            ▒██▒ ▄██▒██  ▀█▄  ▓██░ ██▓▒▒███   ▓██ ░▄█ ▒
-            ▒██░█▀  ░██▄▄▄▄██ ▒██▄█▓▒ ▒▒▓█  ▄ ▒██▀▀█▄  
-            ░▓█  ▀█▓ ▓█   ▓██▒▒██▒ ░  ░░▒████▒░██▓ ▒██▒
-            ░▒▓███▀▒ ▒▒   ▓▒█░▒▓▒░ ░  ░░░ ▒░ ░░ ▒▓ ░▒▓░
-            ▒░▒   ░   ▒   ▒▒ ░░▒ ░      ░ ░  ░  ░▒ ░ ▒░
-             ░    ░   ░   ▒   ░░          ░     ░░   ░ 
-             ░            ░  ░            ░  ░   ░     
-             ░
-"
-
-echo -e $k"+"$n"-------------------------------------------------------------------"$k"+"$n
-echo -e $k"+"$n"    $m  Codename                   :   $h         Jones.               "$k"+"$n
-echo -e $k"+"$n"    $m  Version                    :   $h         1.0                  "$k"+"$n
-echo -e $k"+"$n"    $m  Author                     :   $h         alinko (shutdown57)  "$k"+"$n
-echo -e $k"+"$n"    $m         -[ dracos-linux.org :$h linuXcode.org ]-                 "$k"+"$n 
-echo -e $k"+"$n"-------------------------------------------------------------------"$k"+"$n
-printf "
-USAGE (MENGGUNAKAN :p)
-
-baper --ahh <BaperFiles>
-baper --add <BaperFiles>
-baper --show
-baper --figlet \"KataKataBaper\"
-baper --about
-baper --cpuinfo
-
-EXAMPLES :
-baper --ahh default
-
-      "
-      ;;
-esac
+echo "~[ welcome! This Script Installer For baper v1.0 ]~"
+echo "~ Select your options :"
+printf "\n\n"
+echo "1 ) Install"
+echo "2 ) Uninstall"
+printf "\n\n"
+echo "+----------------------------------+"
+echo -n $m"options ] :"$n
+read opt
+if [[ $opt == "1" ]]; then
+echo -e $h"[+] Installing please wait..."$n
+cp baper /usr/bin
+sleep 1
+echo -e $h"[+] Creating directory '/opt/baper' ..."$n
+mkdir /opt/baper
+sleep 1
+mkdir /opt/baper/coli
+echo -e $h"[+] Copying files ..."$n
+cp coli/* /opt/baper/coli
+sleep 1
+echo -e $h"[+] Finishing ..."$n
+cp install /opt/baper
+sleep 1
+echo -e $h"[+] FINISHED [+]"$n
+elif [[ $opt == "2" ]]; then
+	echo -e $m"[+] Removing /usr/bin/baper ..."$n
+	rm /usr/bin/baper
+	sleep 1
+	echo -e $m"[+] Removing Files.."$n
+	rm /opt/baper/coli/*
+	sleep 1
+	echo -e $m"[+] Removing directory '/opt/baper' .. "$n
+	rmdir /opt/baper/coli
+	rm /opt/baper/*
+	rmdir /opt/baper
+	sleep 1
+	echo -e $m"[+] UNINSTALL FINISHED [+]"$n
