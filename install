@@ -106,3 +106,4 @@ elif [[ $opt == "2" ]]; then
 	rmdir /opt/baper
 	sleep 1
 	echo -e $m"[+] UNINSTALL FINISHED [+]"$n
+fi
